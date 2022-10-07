@@ -38,6 +38,11 @@ describe StringAnalyzer do
       test_string = "123.??"
       expect(@str_analyzer.has_vowels?(test_string)).to be false
     end
+
+    it "should return true if it only has upper case vowels" do
+      test_string = "ABCD"
+      expect(@str_analyzer.has_vowels?(test_string)).to be true
+    end
   end
 end
 

@@ -28,6 +28,11 @@ describe StringAnalyzer do
     it "should return false if it's an empty string" do
       expect(@str_analyzer.has_vowels?("")).to be false
     end
+
+    it "should return true if it has vowels, consonants, numbers and other characters" do
+      test_string = "abcd123.?"
+      expect(@str_analyzer.has_vowels?(test_string)).to be true
+    end
   end
 end
 

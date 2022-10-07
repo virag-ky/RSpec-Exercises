@@ -1,17 +1,23 @@
 require './string_analyzer'
 
 describe StringAnalyzer do
+  before :each do
+    @str_analyzer = StringAnalyzer.new
+  end
   context "With valid input" do
     it "should detect when a string contains vowels" do
-      str_analyzer = StringAnalyzer.new
       test_string = 'aei'
-      expect(str_analyzer.has_vowels?(test_string)).to be true
+      expect(@str_analyzer.has_vowels?(test_string)).to be true
     end
 
     it "should detect when a string doesn't contain vowels" do
-      str_analyzer = StringAnalyzer.new
       test_string = 'sdmk'
-      expect(str_analyzer.has_vowels?(test_string)).to be false
+      expect(@str_analyzer.has_vowels?(test_string)).to be false
+    end
+
+    it "should work with just one letter" do
+      test_string = 'a'
+      expect(@str_analyzer.has_vowels?(test_string)).to be true
     end
   end
 end

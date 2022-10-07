@@ -48,6 +48,11 @@ describe StringAnalyzer do
       test_string = "abCDe"
       expect(@str_analyzer.has_vowels?(test_string)).to be true
     end
+
+    it "should return true if it has both upper and lower case vowels and consonants" do
+      test_string = "brgfaiSWOU"
+      expect(@str_analyzer.has_vowels?(test_string)).to be true
+    end
   end
 end
 

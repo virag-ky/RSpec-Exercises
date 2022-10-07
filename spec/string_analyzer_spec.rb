@@ -53,6 +53,11 @@ describe StringAnalyzer do
       test_string = "brgfaiSWOU"
       expect(@str_analyzer.has_vowels?(test_string)).to be true
     end
+
+    it "should return false if it has only upper case consonants" do
+      test_string = "MWFT"
+      expect(@str_analyzer.has_vowels?(test_string)).to be false
+    end
   end
 end
 

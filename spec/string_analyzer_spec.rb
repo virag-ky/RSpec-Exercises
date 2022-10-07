@@ -58,6 +58,10 @@ describe StringAnalyzer do
       test_string = "MWFT"
       expect(@str_analyzer.has_vowels?(test_string)).to be false
     end
+
+    it "should return false for only whitespace characters" do
+      expect(@str_analyzer.has_vowels?(" ")). to be false
+    end
   end
 end
 

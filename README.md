@@ -2,6 +2,8 @@
 
 > This repository is for practice writing tests with RSpec.
 
+> [RSpec](https://rspec.info/) is a testing framework for [Ruby](https://ruby-doc.org/).
+
 ## Language:
 * Ruby
 

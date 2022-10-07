@@ -33,6 +33,11 @@ describe StringAnalyzer do
       test_string = "abcd123.?"
       expect(@str_analyzer.has_vowels?(test_string)).to be true
     end
+
+    it "should return false if it only contains numbers and other characters" do
+      test_string = "123.??"
+      expect(@str_analyzer.has_vowels?(test_string)).to be false
+    end
   end
 end
 

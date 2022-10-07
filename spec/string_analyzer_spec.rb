@@ -24,6 +24,10 @@ describe StringAnalyzer do
       test_string = 'abcde'
       expect(@str_analyzer.has_vowels?(test_string)).to be true
     end
+
+    it "should return false if it's an empty string" do
+      expect(@str_analyzer.has_vowels?("")).to be false
+    end
   end
 end
 

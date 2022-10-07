@@ -19,6 +19,11 @@ describe StringAnalyzer do
       test_string = 'a'
       expect(@str_analyzer.has_vowels?(test_string)).to be true
     end
+
+    it "should return true if it has at least one vowel and some consonants" do
+      test_string = 'abcde'
+      expect(@str_analyzer.has_vowels?(test_string)).to be true
+    end
   end
 end
 
